@@ -502,15 +502,15 @@
         
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
             margin-top: 40px;
         }
         
         .project-card {
             background: var(--glass);
             border-radius: 20px;
-            padding: 40px 30px;
+            padding: 30px;
             position: relative;
             overflow: hidden;
             transition: var(--transition);
@@ -535,7 +535,7 @@
         }
         
         .project-card:hover {
-            transform: translateY(-20px);
+            transform: translateY(-15px);
             box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
         }
         
@@ -544,34 +544,34 @@
         }
         
         .project-icon {
-            font-size: 3rem;
+            font-size: 2.5rem;
             color: var(--primary);
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             transition: var(--transition);
         }
         
         .project-card:hover .project-icon {
-            transform: scale(1.2) rotate(10deg);
+            transform: scale(1.15) rotate(10deg);
             filter: drop-shadow(0 0 10px var(--primary));
         }
         
         .project-title {
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             color: #fff;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             font-weight: 700;
         }
         
         .project-desc {
-            font-size: 1.1rem;
+            font-size: 1rem;
             color: var(--light);
-            margin-bottom: 25px;
-            line-height: 1.7;
+            margin-bottom: 20px;
+            line-height: 1.6;
         }
         
         .project-link {
             display: inline-block;
-            padding: 12px 30px;
+            padding: 10px 25px;
             background: var(--primary);
             color: #fff;
             border-radius: 8px;
@@ -579,6 +579,7 @@
             font-weight: 600;
             transition: var(--transition);
             border: 2px solid transparent;
+            font-size: 0.95rem;
         }
         
         .project-link:hover {
@@ -996,7 +997,7 @@
             }
             .project-card,
             .skill-category {
-                padding: 30px 20px;
+                padding: 25px 15px;
             }
             .skills-orbit {
                 width: 280px;
@@ -1018,6 +1019,36 @@
                 height: 70px;
                 font-size: 1rem;
             }
+        }
+        /* Project Navigation */
+        .projects-nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .project-page-btn {
+            padding: 8px 16px;
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--light);
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 500;
+        }
+        
+        .project-page-btn:hover {
+            background: var(--primary);
+            color: #fff;
+        }
+        
+        .project-page-btn.active {
+            background: var(--primary);
+            color: #fff;
+            box-shadow: 0 0 15px rgba(0, 191, 255, 0.5);
         }
     </style>
 </head>
@@ -1089,7 +1120,7 @@
             <div class="stat-label">Years of Experience</div>
         </div>
         <div class="stat-box">
-            <div class="stat-number" id="stat-projects">40+</div>
+            <div class="stat-number" id="stat-projects">45+</div>
             <div class="stat-label">Projects Completed</div>
         </div>
         <div class="stat-box">
@@ -1107,6 +1138,7 @@
         <h2 class="section-title">My Projects</h2>
         <div class="section-content">
             <div class="projects-grid">
+                <!-- Project 1 -->
                 <div class="project-card" style="--delay: 1;">
                     <div class="project-icon">
                         <i class="fab fa-js-square"></i>
@@ -1118,6 +1150,7 @@
                     <a href="https://684102248eda859751d0c1ed--yuvraj-maze-game.netlify.app/" class="project-link" target="_blank">Play Now</a>
                 </div>
 
+                <!-- Project 2 -->
                 <div class="project-card" style="--delay: 2;">
                     <div class="project-icon">
                         <i class="fab fa-discord"></i>
@@ -1129,6 +1162,7 @@
                     <a href="https://zyrok-bot.netlify.app/" class="project-link" target="_blank">Explore Bot</a>
                 </div>
 
+                <!-- Project 3 -->
                 <div class="project-card" style="--delay: 3;">
                     <div class="project-icon">
                         <i class="fas fa-gamepad"></i>
@@ -1140,7 +1174,7 @@
                     <a href="https://demo-works.netlify.app/" class="project-link" target="_blank">View Tournament</a>
                 </div>
 
-                <!-- New Minecraft Server Project -->
+                <!-- Project 4 -->
                 <div class="project-card" style="--delay: 4;">
                     <div class="project-icon">
                         <i class="fas fa-server"></i>
@@ -1151,6 +1185,27 @@
                     </p>
                     <a href="https://mincraft-server-demo.netlify.app/" class="project-link" target="_blank">Visit Server</a>
                 </div>
+
+                <!-- New Portfolio Design Project -->
+                <div class="project-card" style="--delay: 5;">
+                    <div class="project-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3 class="project-title">Portfolio Design</h3>
+                    <p class="project-desc">
+                        Modern portfolio website with glassmorphism, animations, and dark mode. Features responsive design and interactive elements.
+                    </p>
+                    <a href="https://yuvrajbold-portfolio-2.netlify.app/" class="project-link" target="_blank">View Portfolio</a>
+                </div>
+
+                <!-- Additional projects would appear here -->
+            </div>
+            
+            <!-- Project Navigation -->
+            <div class="projects-nav">
+                <button class="project-page-btn active">1</button>
+                <button class="project-page-btn">2</button>
+                <button class="project-page-btn">3</button>
             </div>
         </div>
     </section>
@@ -1530,7 +1585,7 @@
 
         function animateStats() {
             animateStatNumber('stat-years', '3+');
-            animateStatNumber('stat-projects', '40+');
+            animateStatNumber('stat-projects', '45+');
             animateStatNumber('stat-clients', '25+');
             animateStatNumber('stat-skills', '15+');
         }
@@ -1558,6 +1613,18 @@
 
             update();
         }
+        
+        // Project navigation buttons
+        const projectBtns = document.querySelectorAll('.project-page-btn');
+        projectBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                projectBtns.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                // In a real implementation, this would load different project sets
+                // For this demo, we'll just show a message
+                alert(`Loading projects for page ${this.textContent}`);
+            });
+        });
     </script>
 </body>
 
